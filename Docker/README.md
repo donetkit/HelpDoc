@@ -81,6 +81,11 @@ Identity added: .ssh/id_rsa (fangts@zhaoxuewang.cn)
 Microfoft@DESKTOP-N8QRTJ4 MINGW64 ~
 $
 
+
+windows下在多个git服务器之间切换，需要使用 ssh-add.exe ~/.ssh/id_rsa_xxx 重新添加git密钥才能正常clone代码，其中“id_ras_xxx”是密钥的名字，比如本人github所用的密钥名为id_rsa_github(这里需要注意不要同公钥发生混淆，公钥名为id_rsa_github.pub)。
+
+提示“ Could not open a connection to your authentication agent”，是因为你没有启动ssh-agent，解决方法简单：
+
 ssh://git@你的域名:222/用户名/test.git
 
 ```
